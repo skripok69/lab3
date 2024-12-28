@@ -5,8 +5,8 @@
 
 void push(Stack_link** top, int num) {
     Stack_link* p = (Stack_link*)malloc(sizeof(Stack_link));
-    p->inf = num;
-    p->link = *top;
+    p -> inf = num;
+    p -> link = *top;
     *top = p;
 }
 
@@ -19,10 +19,10 @@ int pop(Stack_link** top) {
 }
 
 void read(Stack_link** top) {
-    char stroka[1024];
+    char stroka[300];
     Stack_link* temp_stack = NULL;
     fgets(stroka, sizeof(stroka), stdin);
-    char* numbers= strtok(stroka, " ");
+    char* numbers = strtok(stroka, " ");
     int num;
     while (numbers != NULL){
         sscanf(numbers, "%d", &num);
