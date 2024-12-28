@@ -10,9 +10,11 @@ int main(int argc, char* argv[]) {
         const char* filename = argv[2];
         Stack_link* stack_num = NULL;
         read(&stack_num);
+        printf("Исходный ряд: ");
         write(&stack_num, filename);
         sort(&stack_num);
         printf("\n");
+        printf("Отсортированный ряд: ");
         write(&stack_num, filename);
         return 0;
     }
